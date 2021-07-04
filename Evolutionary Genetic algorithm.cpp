@@ -1,4 +1,4 @@
-//MATVEEV IGOR 118 GROUP
+//MATVEEV IGOR
 
 #include <cstdlib>
 #include <iostream>
@@ -173,7 +173,7 @@ void write (data coordinates[]){
 }
 
 int main(){
-    int /*r1, r2,*/ cnt, PROCENT10 = (10*SIZE)/100, PROCENT90 = (90*SIZE)/100;
+    int cnt, PROCENT10 = (10*SIZE)/100, PROCENT90 = (90*SIZE)/100;
     subject temp, RESULT;
 
     //SAVE COORDINATES FROM FILE
@@ -223,9 +223,7 @@ int main(){
 
         //90% SUBJECTS ARE CREATED FROM THE FIRST 50% SUBJECTS
         for(int i=0; i<PROCENT90; i++){
-            /*r1 = rand()%SIZE2+0;
-            r2 = rand()%SIZE2+0;*/
-            RESULT = population[rand()%(SIZE/2)+0]+population[rand()%(SIZE/2)+0]; //ERROR???
+            RESULT = population[rand()%(SIZE/2)+0]+population[rand()%(SIZE/2)+0];
             RESULT.give_deviation(coordinates);
             new_population[i + PROCENT10] = RESULT;
         }
